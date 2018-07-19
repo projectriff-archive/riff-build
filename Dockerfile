@@ -10,7 +10,7 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o /riff-init cmd/main.go
 
 ###########
 
-FROM scratch
+FROM gcr.io/distroless/base:latest
 
 # The following line forces the creation of a /tmp directory
 WORKDIR /tmp
