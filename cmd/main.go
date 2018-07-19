@@ -18,8 +18,8 @@ package main
 
 import (
 	"flag"
+	"fmt"
 
-	"github.com/golang/glog"
 	"github.com/projectriff/riff-init/pkg/initializer"
 )
 
@@ -31,11 +31,14 @@ var (
 func main() {
 	invoker, err := initializer.LoadInvoker(functionInvoker)
 	if err != nil {
-		glog.Fatalf("Unable to get invoker: %v", err)
+		fmt.Printf("Unable to get invoker: %v\n", err)
+		panic(err)
 	}
+	fmt.Printf("Initializing with %s invoker\n", invoker.Name)
 	err = initializer.Initialize(invoker, &initOptions)
 	if err != nil {
-		glog.Fatalf("Unable initialize function: %v", err)
+		fmt.Printf("Unable initialize function: %v\n", err)
+		panic(err)
 	}
 }
 
