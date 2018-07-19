@@ -37,6 +37,9 @@ func LoadInvoker(path string) (*projectriff_v1.Invoker, error) {
 		return nil, fmt.Errorf("no single match for invoker path: %s", path)
 	}
 	invokerBytes, err := loadInvoker(invokerURLs[0])
+	if err != nil {
+		return nil, err
+	}
 
 	invoker := projectriff_v1.Invoker{}
 	err = yaml.Unmarshal(invokerBytes, &invoker)
