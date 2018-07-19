@@ -41,9 +41,12 @@ func main() {
 
 func init() {
 	initOptions := initializer.InitOptions{}
+
 	flag.StringVar(&functionInvoker, "invoker", "", "")
 	flag.StringVar(&initOptions.FunctionName, "name", "", "")
 	flag.StringVar(&initOptions.Artifact, "artifact", "", "")
 	flag.StringVar(&initOptions.Handler, "handler", "", "")
 	flag.StringVar(&initOptions.FilePath, "filepath", "", "")
+
+	flag.Parse()
 }

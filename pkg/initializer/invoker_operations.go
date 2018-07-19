@@ -34,7 +34,7 @@ func LoadInvoker(path string) (*projectriff_v1.Invoker, error) {
 		return nil, err
 	}
 	if len(invokerURLs) != 1 {
-		return nil, fmt.Errorf("found multiple matches for invoker path: %s", path)
+		return nil, fmt.Errorf("no single match for invoker path: %s", path)
 	}
 	invokerBytes, err := loadInvoker(invokerURLs[0])
 
