@@ -40,13 +40,13 @@ func main() {
 }
 
 func init() {
-	initOptions := initializer.InitOptions{}
+	initOptions = initializer.InitOptions{}
 
-	flag.StringVar(&functionInvoker, "invoker", "", "")
-	flag.StringVar(&initOptions.FunctionName, "name", "", "")
-	flag.StringVar(&initOptions.Artifact, "artifact", "", "")
-	flag.StringVar(&initOptions.Handler, "handler", "", "")
-	flag.StringVar(&initOptions.FilePath, "filepath", "", "")
+	flag.StringVar(&functionInvoker, "invoker", "", "Path to the riff invoker.yaml, may be a local path or http")
+	flag.StringVar(&initOptions.FunctionName, "name", "", "The name of the function")
+	flag.StringVar(&initOptions.Artifact, "artifact", "", "Path to the function artifact, source code or jar file (attempts detection if not specified)")
+	flag.StringVar(&initOptions.Handler, "handler", "", "Name of method or class to invoke (see specific invoker for detail)")
+	flag.StringVar(&initOptions.FilePath, "filepath", "", "Path or directory used for the function (defaults to the current directory)")
 
 	flag.Parse()
 }
