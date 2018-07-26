@@ -1,10 +1,16 @@
 language: go
 go:
 - '1.10'
+install: go get github.com/google/go-containerregistry/cmd/ko
 matrix:
   include:
   - stage: test
-    script: make test
+    sudo: required
+    services:
+    - docker
+    script:
+    - go test ./...
+    - ko resolve -L -f config/
   - stage: publish
     sudo: required
     env:
