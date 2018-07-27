@@ -24,7 +24,7 @@ spec:
     default: fn
   steps:
   - name: riff-init
-    image: github.com/projectriff/riff-init/cmd
+    image: github.com/projectriff/riff-init/cmd/riff-init
     args:
     - --invoker=${INVOKER_PATH}
     - --name=${FUNCTION_NAME}
