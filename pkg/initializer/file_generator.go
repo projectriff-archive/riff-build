@@ -19,7 +19,7 @@ package initializer
 import (
 	"path/filepath"
 
-	"github.com/projectriff/riff-init/pkg/osutils"
+	"github.com/projectriff/riff-build/pkg/osutils"
 )
 
 type fileTokens struct {

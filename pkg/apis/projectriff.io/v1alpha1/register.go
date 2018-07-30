@@ -21,7 +21,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	riff "github.com/projectriff/riff-init/pkg/apis/projectriff.io"
+	riff "github.com/projectriff/riff-build/pkg/apis/projectriff.io"
 )
 
 // SchemeGroupVersion is group version used to register these objects
