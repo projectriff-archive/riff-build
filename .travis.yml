@@ -1,7 +1,7 @@
 language: go
 go:
 - '1.10'
-go_import_path: github.com/projectriff/riff-init
+go_import_path: github.com/projectriff/riff-build
 install:
 - go get -t ./...
 - go get github.com/google/go-containerregistry/cmd/ko
