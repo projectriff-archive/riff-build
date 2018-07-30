@@ -1,7 +1,9 @@
 language: go
 go:
 - '1.10'
-install: go get github.com/google/go-containerregistry/cmd/ko
+install:
+- go get -t ./...
+- go get github.com/google/go-containerregistry/cmd/ko
 matrix:
   include:
   - stage: test
