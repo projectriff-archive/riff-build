@@ -1,12 +1,12 @@
 FROM golang:1.10 as builder
 
-WORKDIR /go/src/github.com/projectriff/riff-init
+WORKDIR /go/src/github.com/projectriff/riff-build
 
 COPY ./cmd/ ./cmd/
 COPY ./pkg/ ./pkg/
 COPY ./vendor/ ./vendor/
 
-RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o /riff-init cmd/main.go
+RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o /riff-init cmd/riff-init/main.go
 
 ###########
 

@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	projectriff_v1 "github.com/projectriff/riff-init/pkg/apis/projectriff.io/v1alpha1"
+	projectriff_v1 "github.com/projectriff/riff-build/pkg/apis/projectriff.io/v1alpha1"
 )
 
 type resource struct {

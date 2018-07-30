@@ -19,4 +19,4 @@
 // Package v1 contains the v1 version of API types corresponding to riff Custom
 // Resource Definitions.
 // +groupName=projectriff.io
-package v1alpha1 // import "github.com/projectriff/riff-init/pkg/apis/projectriff.io/v1alpha1"
+package v1alpha1 // import "github.com/projectriff/riff-build/pkg/apis/projectriff.io/v1alpha1"

@@ -27,7 +27,7 @@ CODEGEN_PKG=${CODEGEN_PKG:-$(cd ${SCRIPT_ROOT}; ls -d -1 ./vendor/k8s.io/code-ge
 #                  instead of the $GOPATH directly. For normal projects this can be dropped.
 # skipping "client,informer,lister"
 ${CODEGEN_PKG}/generate-groups.sh "deepcopy" \
-  github.com/projectriff/riff-init/pkg/client github.com/projectriff/riff-init/pkg/apis \
+  github.com/projectriff/riff-build/pkg/client github.com/projectriff/riff-build/pkg/apis \
   "projectriff.io:v1alpha1" \
   --go-header-file ${SCRIPT_ROOT}/hack/boilerplate/boilerplate.go.txt
 

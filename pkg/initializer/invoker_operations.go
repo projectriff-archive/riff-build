@@ -24,8 +24,8 @@ import (
 	"path/filepath"
 
 	"github.com/ghodss/yaml"
-	projectriff_v1 "github.com/projectriff/riff-init/pkg/apis/projectriff.io/v1alpha1"
-	"github.com/projectriff/riff-init/pkg/osutils"
+	projectriff_v1 "github.com/projectriff/riff-build/pkg/apis/projectriff.io/v1alpha1"
+	"github.com/projectriff/riff-build/pkg/osutils"
 )
 
 func LoadInvoker(path string) (*projectriff_v1.Invoker, error) {
